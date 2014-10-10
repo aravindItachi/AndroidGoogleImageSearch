@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.yahoo.akv.gridimagesearch.GridImageSearchActivity" >
+	<item
+        android:id="@+id/item1"
+        android:icon="@drawable/ic_settings"
+        android:onClick="onAddItemClicked"
+        android:showAsAction="ifRoom"
+        android:title="Settings">
+    </item>
+
+</menu>

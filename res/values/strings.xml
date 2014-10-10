@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sizes_array">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Any</item>
+    </string-array>
+
+     <string-array name="colors_array">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Any</item>
+    </string-array>
+     <string-array name="types_array">
+        <item>Faces</item>
+        <item>Photo</item>
+        <item>Clip Art</item>
+        <item>Line Art</item>
+        <item>Any</item>
+    </string-array>
+    
+    <string name="app_name">GridImageSearch</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Image Search Settings</string>
+    <string name="searchOptions">Advanced Search Options</string>
+    <string name="imgsize">Image Size</string>
+    <string name="search">Search</string>
+    <string name="searchhint">Enter image search</string>
+    <string name="imgtitle">Image Title</string>
+    <string name="title_activity_display_image">Full Image</string>
+    <string name="imgColor">"Image Color "</string>
+    <string name="imgtype">Image Type</string>
+    <string name="sitefilter">Site Filter</string>
+    <string name="urlfilter">URL to filter...</string>
+    <string name="savesettings">Save</string>
+
+</resources>

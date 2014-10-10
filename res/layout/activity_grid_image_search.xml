@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    tools:context="com.yahoo.akv.gridimagesearch.activity.GridImageSearchActivity" >
+
+    <Button
+        android:id="@+id/searchbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/query"
+        android:layout_alignTop="@+id/query"
+        android:layout_toRightOf="@+id/query"
+        android:layout_marginLeft="5dp"
+        android:onClick="searchButtonClicked"
+        android:text="@string/search" />
+
+    <GridView
+        android:id="@+id/imagegridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/query"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/query"
+        android:numColumns="3" >
+
+    </GridView>
+
+    <EditText
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="@string/searchhint"
+        android:inputType="textShortMessage" />
+
+</RelativeLayout>
