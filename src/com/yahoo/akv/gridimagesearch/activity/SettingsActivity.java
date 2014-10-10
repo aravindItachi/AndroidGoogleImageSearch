@@ -46,6 +46,17 @@ public class SettingsActivity extends Activity {
 		// Apply the adapter to the spinner
 		type.setAdapter(typeAdapter);
 		settings =(Settings) getIntent().getParcelableExtra("settings");
+		setSavedSettings();
+		size.setSelection(sizeAdapter.getPosition(settings.imgSize));
+		color.setSelection(colorAdapter.getPosition(settings.imgColor));
+		type.setSelection(typeAdapter.getPosition(settings.imgType));
+		if(urlfilter.length() > 0)
+		urlfilter.setText(settings.urlFilter);
+	}
+
+	private void setSavedSettings() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void saveSettings(View v) {

@@ -63,7 +63,7 @@ public class GridImageSearchActivity extends Activity {
 				// TODO Auto-generated method stub
 				String url = GridImageSearchActivity.this.queryUrl;
 				url +=  "&start=" + (page * totalItemsCount);
-				GridImageSearchActivity.this.makeApiCall(url);
+				GridImageSearchActivity.this.makeScrollApiCall(url);
 			}
 		});
         this.settings = new Settings("Any", "Any", "Any", "");
@@ -109,7 +109,7 @@ public class GridImageSearchActivity extends Activity {
     			url += "&as_sitesearch=" + urlFilter.toLowerCase(); 
     		}
     		this.queryUrl = url;
-    		//makeApiCall(url);
+    		makeApiCall(url);
     	}
 		
 	}
@@ -125,7 +125,7 @@ public class GridImageSearchActivity extends Activity {
 				try {
 					JSONArray imageresultsarray = response.getJSONObject("responseData").getJSONArray("results");
 					imageResults.clear();
-					imageResultsAdapter.clear();
+					//imageResultsAdapter.clear();
 					imageResultsAdapter.addAll(ImageResult.getImageResultsAray(imageresultsarray));
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -134,6 +134,29 @@ public class GridImageSearchActivity extends Activity {
 			}
 		});
     }
+    
+    public void makeScrollApiCall(String url){
+    	AsyncHttpClient client = new AsyncHttpClient();
+    	client.get(url , new JsonHttpResponseHandler(){
+			@Override
+			public void onSuccess(int statusCode, Header[] headers,
+					JSONObject response) {
+				// TODO Auto-generated method stub
+				Log.d("Debug", response.toString());
+				try {
+					JSONArray imageresultsarray = response.getJSONObject("responseData").getJSONArray("results");
+					//imageResults.clear();
+					//imageResultsAdapter.clear();
+					//imageResultsAdapter.a
+					imageResultsAdapter.addAll(ImageResult.getImageResultsAray(imageresultsarray));
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+    }
+    
      @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	// TODO Auto-generated method stub
